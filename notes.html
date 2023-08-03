@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Notes &#8212; CIS 706/801: Translator Design I &amp; II, Fall 2022</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=7b95706a" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css?v=90e37d00" />
+    <link rel="stylesheet" type="text/css" href="_static/cis706.css?v=f84b051f" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/jquery-1.11.0.min.js"></script>
+    <script src="_static/js/jquery-fix.js"></script>
+    <script src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Projects" href="projects.html" />
+    <link rel="prev" title="Advice" href="advice.html" />
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Home</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="syllabus.html">Syllabus</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">Notes</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html"> <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <section id="notes">
+<span id="id1"></span><h1>Notes<a class="headerlink" href="#notes" title="Permalink to this heading">¶</a></h1>
+<h3>CIS 706/801: Translator Design I & II, Fall 2023</h3><hr class="docutils" />
+<section id="cis-account">
+<h2>CIS Account<a class="headerlink" href="#cis-account" title="Permalink to this heading">¶</a></h2>
+<p>If you do not have a CIS account, here is how to get one:</p>
+<ul class="simple">
+<li><p>Get a <a class="reference external" href="https://eid.k-state.edu/">K-State eID</a> if you don’t already have one.</p></li>
+<li><p><a class="reference external" href="https://selfserv.cs.ksu.edu/">Sign up</a> online for a CIS account
+(which requires an active eID first!).</p></li>
+<li><p>The account manager will approve your account and you will receive a password
+by email to by your eID account.</p></li>
+</ul>
+</section>
+<section id="github-account">
+<h2>GitHub Account<a class="headerlink" href="#github-account" title="Permalink to this heading">¶</a></h2>
+<p>Coursework submissions will be done via <a class="reference external" href="https://github.com">GitHub</a>.
+In the beginning of the course, each student will be given a private GitHub
+repository; thus, you need to have a <a class="reference external" href="https://github.com/join">GitHub account</a>.</p>
+</section>
+<section id="course-software-infrastructure">
+<span id="sireum"></span><h2>Course Software Infrastructure<a class="headerlink" href="#course-software-infrastructure" title="Permalink to this heading">¶</a></h2>
+<p>It is required that you use <a class="reference external" href="https://github.com/sireum/kekinian">Sireum IVE</a> which provides all the required tools
+for the course in a single bundle.</p>
+<p>To install from source:</p>
+<ul>
+<li><p><strong>macOS/Linux</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sireum</span><span class="o">/</span><span class="n">kekinian</span>
+<span class="n">cd</span> <span class="n">kekinian</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="o">&lt;</span><span class="n">commit</span><span class="o">-</span><span class="ow">or</span><span class="o">-</span><span class="n">tag</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span> <span class="o">--</span><span class="n">init</span> <span class="o">--</span><span class="n">recursive</span>
+<span class="nb">bin</span><span class="o">/</span><span class="n">build</span><span class="o">.</span><span class="n">cmd</span> <span class="n">setup</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Windows</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sireum</span><span class="o">/</span><span class="n">kekinian</span>
+<span class="n">cd</span> <span class="n">kekinian</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="o">&lt;</span><span class="n">commit</span><span class="o">-</span><span class="ow">or</span><span class="o">-</span><span class="n">tag</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span> <span class="o">--</span><span class="n">init</span> <span class="o">--</span><span class="n">recursive</span>
+<span class="nb">bin</span>\<span class="n">build</span><span class="o">.</span><span class="n">cmd</span> <span class="n">setup</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;commit-or-tag&gt;</span></code> is <code class="docutils literal notranslate"><span class="pre">8603817</span></code> or <code class="docutils literal notranslate"><span class="pre">4.20220822.8603817</span></code> (or a later commit tip or tag).</p>
+<p>You can also download pre-built version of the above commit/tag at: <a class="reference external" href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a></p>
+<p>Before executing the macOS pre-built self-extracting file, you might need to “un-quarantine” the self-extracting executable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xattr</span> <span class="o">-</span><span class="n">rd</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">quarantine</span> <span class="o">&lt;</span><span class="n">PATH</span><span class="o">-</span><span class="n">TO</span><span class="o">&gt;/</span><span class="n">sireum</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">mac</span><span class="o">.</span><span class="n">sfx</span>
+</pre></div>
+</div>
+<p>See more information at: <a class="reference external" href="https://github.com/sireum/kekinian/blob/master/readme.md">https://github.com/sireum/kekinian/blob/master/readme.md</a></p>
+</section>
+<section id="git-workflow">
+<span id="gitw"></span><h2>Git Workflow<a class="headerlink" href="#git-workflow" title="Permalink to this heading">¶</a></h2>
+<p>To merge updates from <a class="reference external" href="https://github.com/ksu-cis-706/f23-706-project">https://github.com/ksu-cis-706/f23-706-project</a> (replace <code class="docutils literal notranslate"><span class="pre">&lt;eid&gt;</span></code> with your K-State e-id):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ksu</span><span class="o">-</span><span class="n">cis</span><span class="o">-</span><span class="mi">706</span><span class="o">/</span><span class="n">f23</span><span class="o">-</span><span class="mi">706</span><span class="o">-&lt;</span><span class="n">eid</span><span class="o">&gt;.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">f23</span><span class="o">-</span><span class="mi">706</span><span class="o">-&lt;</span><span class="n">eid</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ksu</span><span class="o">-</span><span class="n">cis</span><span class="o">-</span><span class="mi">706</span><span class="o">/</span><span class="n">f23</span><span class="o">-</span><span class="mi">706</span><span class="o">-</span><span class="n">project</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+<p>Resolve any git merge issues, then:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+<span class="n">sireum</span> <span class="n">proyek</span> <span class="n">ive</span> <span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="staticjava-compiler-examples-and-slides">
+<h2>StaticJava Compiler, Examples, and Slides<a class="headerlink" href="#staticjava-compiler-examples-and-slides" title="Permalink to this heading">¶</a></h2>
+<p>The course example projects (e.g., StaticJava Compiler) are stored in a Git
+repository accessible at: <a class="reference external" href="https://github.com/ksu-cis-706/f23-706-project">https://github.com/ksu-cis-706/f23-706-project</a></p>
+<p>Slides can be accessed in the course’s K-State Canvas Files section.</p>
+<p>Note that the slides might be updated during the course so do not print them
+until we have discussed the topics.</p>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+
+  </body>
+</html>

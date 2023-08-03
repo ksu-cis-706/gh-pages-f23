@@ -1,0 +1,111 @@
+.. _notes:
+
+Notes
+#####
+
+.. raw:: html
+
+   <h3>CIS 706/801: Translator Design I & II, Fall 2023</h3>
+
+----
+
+.. include:: def.rst
+
+
+CIS Account
+***********
+
+If you do not have a CIS account, here is how to get one:
+
+* Get a `K-State eID <https://eid.k-state.edu/>`__ if you don't already have one.
+
+* `Sign up <https://selfserv.cs.ksu.edu/>`__ online for a CIS account
+  (which requires an active eID first!).
+
+* The account manager will approve your account and you will receive a password
+  by email to by your eID account.  
+
+
+GitHub Account
+**************
+
+Coursework submissions will be done via |GitHub|.
+In the beginning of the course, each student will be given a private GitHub
+repository; thus, you need to have a `GitHub account <https://github.com/join>`__.
+
+
+.. _sireum:
+
+Course Software Infrastructure
+******************************
+
+It is required that you use |SireumIVE| which provides all the required tools
+for the course in a single bundle.
+
+To install from source:
+
+* **macOS/Linux**
+
+  .. code-block::
+
+     git clone https://github.com/sireum/kekinian
+     cd kekinian
+     git checkout <commit-or-tag>
+     git submodule update --init --recursive
+     bin/build.cmd setup
+
+* **Windows**
+
+  .. code-block::
+
+     git clone https://github.com/sireum/kekinian
+     cd kekinian
+     git checkout <commit-or-tag>
+     git submodule update --init --recursive
+     bin\build.cmd setup
+
+``<commit-or-tag>`` is ``8603817`` or ``4.20220822.8603817`` (or a later commit tip or tag).
+
+You can also download pre-built version of the above commit/tag at: https://github.com/sireum/kekinian/releases
+
+Before executing the macOS pre-built self-extracting file, you might need to "un-quarantine" the self-extracting executable:
+
+.. code-block::
+
+   xattr -rd com.apple.quarantine <PATH-TO>/sireum-dev-mac.sfx
+
+See more information at: https://github.com/sireum/kekinian/blob/master/readme.md
+
+.. _gitw:
+
+Git Workflow
+************
+
+To merge updates from https://github.com/ksu-cis-706/f23-706-project (replace ``<eid>`` with your K-State e-id):
+
+.. code-block::
+
+   git clone git@github.com:ksu-cis-706/f23-706-<eid>.git
+   cd f23-706-<eid>
+   git remote add upstream git@github.com:ksu-cis-706/f23-706-project.git
+   git fetch upstream
+   git merge upstream/master
+   
+Resolve any git merge issues, then:
+
+.. code-block::
+
+   git push
+   sireum proyek ive .
+
+
+StaticJava Compiler, Examples, and Slides
+*****************************************
+
+The course example projects (e.g., StaticJava Compiler) are stored in a Git
+repository accessible at: https://github.com/ksu-cis-706/f23-706-project
+
+Slides can be accessed in the course's K-State Canvas Files section.
+
+Note that the slides might be updated during the course so do not print them
+until we have discussed the topics.

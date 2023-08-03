@@ -1,0 +1,322 @@
+.. _syllabus:
+
+Syllabus
+########
+
+.. raw:: html
+
+   <h3>CIS 706/801: Translator Design I & II, Fall 2023</h3>
+
+----
+
+.. include:: def.rst
+
+Purpose
+*******
+
+The course will teach modern compiler techniques applied to general-purpose
+programming language.
+The goal of the course is to give students a working knowledge of the
+foundations, tools, and engineering approaches used in developing formal
+language translators.
+The emphasis is on the construction of compilers to position students to build
+translators for little languages in their careers.
+
+
+Course Topics
+*************
+
+Compilers and interpreters, including description of languages, finite state
+scanners, parsing, symbol tables, syntax directed semantics, code generation,
+and static analysis.
+
+
+Philosophy
+**********
+
+This course is based on a course that was originally designed by
+|Laurie J. Hendren| and |Michael I. Schwartzbach| which has been taught at a
+number of universities over the past decade.
+The course received a significant update by |Robby| and |Matthew B. Dwyer| in
+2005 with respect to the projects and the tools that are used for compiler
+implementation; this update achieves a modernization of compiler construction
+technologies.
+This is primarily an introductory compiling course that has been designed to
+recognize that most people will not build a large application like a compiler
+from scratch and that people learn by doing.
+Towards this end, the project for the course involves the enhancement of an
+existing compiler code base.
+Students will be given a working compiler and will be required to extend it in
+significant ways.
+This will give them insights into how a compiler is designed and written that
+they can leverage for their enhancements.
+While serving this purpose, the course does present significantly more content
+on static analysis than is typically found in an introductory compiling course;
+thus it can serve as an effective introduction on advanced topics for graduate
+students.
+
+
+Books
+*****
+
+* `Compilers: Principles, Techniques, and Tools (2nd Edition) <http://www.pearsonhighered.com/pearsonhigheredus/educator/product/products_detail.page?isbn=0321486811>`__, 
+  a.k.a. "Purple Dragon Book" by Alfred V. Aho, Monica S. Lam, Ravi Sethi, 
+  Jeffrey D. Ullman (required)
+
+* `The Definitive ANLTR4 Reference <https://pragprog.com/book/tpantlr2/the-definitive-antlr-4-reference>`__, 
+  by Terence Parr (recommended)
+
+* `Principles of Program Analysis <http://www2.imm.dtu.dk/~riis/PPA/ppa.html>`__,
+  by Flemming Nielson, Hanne Riis Nielson, and Chris Hankin (recommended)
+
+* `Design Patterns: Elements of Reusable Object-Oriented Sofware <http://www.informit.com/store/design-patterns-elements-of-reusable-object-oriented-9780201633610>`__,
+  by Erich Gamma, Richard Helm, Ralph Johnson, John M. Vlissides (recommended)
+
+
+Schedule
+********
+
+:Time: T U, 1:05-2:20pm
+:Place: 2207 |EngHall|
+
+
+Prerequisites
+*************
+
+* `CIS 501: Software Architecture and Design <http://courses.k-state.edu/catalog/undergraduate/en/cis.html#CIS501>`__
+* `CIS 505: Introduction to Programming Languages <http://courses.k-state.edu/catalog/undergraduate/en/cis.html#CIS505>`__
+* Java and C programming skills
+
+
+Credits
+*******
+
+3 credits
+
+
+Instructors
+***********
+
+* `Robby <http://cs.ksu.edu/~robby>`__
+
+  **Office:**       2181 |EngHall|
+
+  **E-mail:**       ``robby at k-state.edu``
+
+  **Office Hours:** Tuesdays 10:30-11:30am
+
+
+Grading
+*******
+
+* CIS 706
+
+  * Projects (50%)
+
+  * Exams (40%)
+
+  * Presentation (10%)
+
+* CIS 801
+
+  * Projects (40%)
+
+  * Exams (30%)
+
+  * Final Project Presentation (5%)
+
+  * Final Project (25%)
+
+
+Grading Policy
+**************
+
+The course :ref:`schedule` page gives the due dates for all of the homework.
+This is to facilitate your planning and time-management.
+Given this, we expect assignments to be turned in on the due date unless prior
+arrangements have been made; late assignments receive a reduction of 1% of the
+total possible points for each hour after the due date/time.
+
+
+Grading Scale
+*************
+
+Course grades are absolute, that is, there is no curve, and will be calculated
+based on your overall percentage on assignments as follows:
+
+* A: 90% -- 100%
+
+* B: 80% -- 89%
+
+* C: 70% -- 79%
+
+* D: 60% -- 69%
+
+* F: below 60%
+
+There is one additional constraint on your final grade.
+To receive a letter grade of A, you must achieve at least a B on one of the exams.
+Similarly, to receive a B you must achieve a C, C you must achieve a D on one of the
+exams. 
+
+
+Computer Access
+***************
+
+This course involves a lot of programming, and it makes significant use of 
+software tools. 
+Many of these can be accessed by you (for free) and installed on your own 
+machine.
+If you prefer, we have everything you need on our CIS department machines so you
+can get an account on our machines.
+See the :ref:`notes` page for information on how to get an account and use our
+machines.
+
+
+Attendance Policy
+*****************
+
+In general, there will be NO make-up quizzes or exams!
+Special consideration will be given in only exceptional circumstances.
+Exceptional circumstances are generally limited to:
+
+* **Emergencies:** death in student's immediate family, or 
+  near-death experience of the student.
+
+* **Non-emergencies:** certified excused absences for official university activities.
+
+If you believe you qualify for exceptional treatment, you must notify the
+instructor prior to the date of the quiz or exam to be missed.
+
+
+Statement Regarding Academic Honesty
+************************************
+
+Kansas State University has an Honor and Integrity System based on personal integrity, 
+which is presumed to be sufficient assurance that, in academic matters, 
+one's work is performed honestly and without unauthorized assistance.
+Undergraduate and graduate students, by registration, acknowledge the jurisdiction of
+the Honor and Integrity System.
+The policies and procedures of the `Honor and Integrity System <https://www.k-state.edu/honor/>`__ apply to all full and 
+part-time students enrolled in undergraduate and graduate courses on-campus, off-campus, 
+and via distance learning.
+A component vital to the Honor and Integrity System is the inclusion of the Honor Pledge
+which applies to all assignments, examinations, or other course work undertaken by students.
+The Honor Pledge is implied, whether or not it is stated:
+"On my honor, as a student, I have neither given nor received unauthorized aid on this academic work."
+A grade of XF can result from a breach of academic honesty. The F indicates failure in the course;
+the X indicates the reason is an Honor Pledge violation.
+
+
+Statement Regarding Students with Disabilities
+**********************************************
+
+At K-State it is important that every student has access to course content and 
+the means to demonstrate course mastery. Students with disabilities may benefit 
+from services including accommodations provided by the Student Access Center.
+Disabilities can include physical, learning, executive functions, and mental health.
+You may register at the Student Access Center (https://k-state.edu/accesscenter) or to learn more contact:  
+
+Manhattan -- Student Access Center  
+accesscenter@k-state.edu
+785-532-6441    
+
+Students already registered with the Student Access Center please request your
+Letters of Accommodation early in the semester to provide adequate time to arrange
+your approved academic accommodations.
+Once SAC approves your Letter of Accommodation it will be e-mailed to you,
+and your instructor(s) for this course.
+Please follow up with your instructor to discuss how best to implement the approved accommodations. 
+
+
+Statement Defining Expectations for Classroom Conduct
+*****************************************************
+
+All student activities in the University, including this course, are governed by the `Student Judicial Conduct Code <https://www.k-state.edu/sga/judicial/>`__
+as outlined in the Student Governing Association By Laws, Article V, Section 3, number 2. 
+Students who engage in behavior that disrupts the learning environment may be asked to leave the class.
+
+Statement on Mutual Respect and Inclusion in K-State Teaching and Learning Spaces
+*********************************************************************************
+
+At K-State, faculty and staff are committed to creating and maintaining an inclusive and 
+supportive learning environment for students from diverse backgrounds and perspectives.
+K-State courses, labs, and other virtual and physical learning spaces promote equitable
+opportunity to learn, participate, contribute, and succeed, regardless of age, race,
+color, ethnicity, nationality, genetic information, ancestry, disability,
+socioeconomic status, military or veteran status, immigration status,
+Indigenous identity, gender identity, gender expression, sexuality, religion, culture,
+as well as other social identities.
+
+Faculty and staff are committed to promoting equity and believe the success of an
+inclusive learning environment relies on the participation, support, and understanding
+of all students. Students are encouraged to share their views and lived experiences as
+they relate to the course or their course experience, while recognizing they are doing
+so in a learning environment in which all are expected to engage with respect to honor
+the rights, safety, and dignity of others in keeping with the K-State Principles of Community
+https://www.k-state.edu/about/values/community/.
+
+If you feel uncomfortable because of comments or behavior encountered in this class,
+you may bring it to the attention of your instructor, advisors, and/or mentors.
+If you have questions about how to proceed with a confidential process to resolve concerns,
+please contact the Student Ombudsperson Office. Violations of the student code of conduct
+can be reported here https://www.k-state.edu/sga/judicial/student-code-of-conduct.html.
+If you experience bias or discrimination, it can be reported here
+https://www.k-state.edu/report/discrimination/.
+
+
+Statement Regarding Wearing of Face Masks
+*****************************************
+
+Kansas State University strongly encourages, but does not require, that everyone wear masks
+while indoors on university property, including while attending in-person classes.
+For additional information and the latest on K-State's face covering policy, see
+https://www.k-state.edu/covid-19/guidance/health/face-covering.html.
+
+
+Statement Regarding Discrimination, Harassment, and Sexual Harassment
+*********************************************************************
+
+Kansas State University is committed to maintaining academic, housing, and 
+work environments that are free of discrimination, harassment, and sexual harassment. 
+Instructors support the University's commitment by creating a safe learning environment
+during this course, free of conduct that would interfere with your academic opportunities.
+Instructors also have a `duty to report <https://www.k-state.edu/oie/faqs.html>`__ any behavior
+they become aware of that potentially violates the University's policy prohibiting discrimination, 
+harassment, and sexual harassment (`PPM 3010 <https://www.k-state.edu/policies/ppm/3000/3010.html>`__).
+
+If a student is subjected to discrimination, harassment, or sexual harassment,
+they are encouraged to make a non-confidential report to the University's `Office for Institutional Equity (OIE) <https://www.k-state.edu/oie/>`__
+using the `online reporting form <https://cm.maxient.com/reportingform.php?KansasStateUniv&layout_id=34>`__.
+Incident disclosure is not required to receive resources at K-State.
+Reports that include domestic and dating violence, sexual assault, or stalking,
+should be considered for reporting by the complainant to the `Kansas State University Police Department <https://www.k-state.edu/police/suggest/>`__
+or the `Riley County Police Department <https://www.rileycountypolice.org/>`__.
+Reports made to law enforcement are separate from reports made to OIE.
+A complainant can choose to report to one or both entities.
+Confidential support and advocacy can be found with the `K-State Center for Advocacy, Response, and Education (CARE) <https://www.k-state.edu/care/>`__.
+Confidential mental health services can be found with `Lafene Counseling and Psychological Services (CAPS) <https://www.k-state.edu/counseling/>`__.
+Academic support can be found with the `Office of Student Life (OSL) <https://www.k-state.edu/studentlife/>`__. 
+OSL is a non-confidential resource. A comprehensive list of resources is available here.
+If you have questions about non-confidential and confidential resources, please contact OIE at
+equity@ksu.edu or (785) 532-6220. 
+
+
+Other Administrative Issues
+***************************
+
+* **Incompletenes:** An incomplete (I) final grade will be given only by prior
+  arrangement in exceptional circumstances conforming to departmental policy in
+  which the bulk of course work has been completed in passing fashion.
+
+* **Drop Policy:** It is your responsibility to drop the course if you are
+  enrolled but decide not to complete the course --- there are no "automatic"
+  drops due to nonattendance.
+  The University allows a retake of a course with removal of the prior grade,
+  at most once per course, for a maximum of five courses.
+
+* **Copyright Issues:** Class and lecture notes for this course carry a
+  copyright.
+  Students are prohibited from selling (or being paid for taking) notes during
+  this course to or by any person or commercial firm without the express written
+  permission of the professor teaching this course.

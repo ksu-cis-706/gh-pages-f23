@@ -1,0 +1,283 @@
+.. _projects:
+
+Projects
+########
+
+.. raw:: html
+
+   <h3>CIS 706/801: Translator Design I & II, Fall 2023</h3>
+
+----
+
+.. include:: def.rst
+
+Example Project -- Static Java Compiler (sjc)
+*********************************************
+
+Static Java Compiler (sjc) is a compiler for a strict "static" (procedural)
+subset of Java (a compiler for structured programs in Java without objects).
+This project is used to illustrate various concepts in designing and
+implementing a translator.
+
+Features/Limitations of Static Java
+===================================
+
+* Only two variable types: boolean and int
+* No objects (thus, no exception handling), arrays, or threads
+* Only static fields and methods
+* Method return type can be the above type and void
+* No method overloading
+* Can call Java library static methods (e.g., Integer.parseInt())
+* Consists only one class that has a Java main method (String array is allowed
+  here)
+* No increment and decrement expressions
+* No package declaration (i.e., the declared class lives in the default package)
+* All code must be in one file, etc.
+
+Concrete Syntax of Static Java
+==============================
+
+::
+
+  <program>                     ::= <class-declaration>
+  <class-declaration>           ::= "public" "class" ID "{" <main-method-declaration> <field-or-method-declaration>* "}"
+  <main-method-declaration>     ::= "public" "static" "void" "main" "(" "String" "[" "]" ID ")" "{" <method-body> "}"
+  <field-or-method-declaration> ::= <field-declaration> | <method-declaration>
+  <field-declaration>           ::= "static" <type> ID ";"
+  <method-declaration>          ::= "static" <return-type> ID "(" <params>? ")" "{" <method-body> "}"
+  <type>                        ::= "boolean" | "int"
+  <return-type>                 ::= <type> | "void"
+  <params>                      ::= <param> ( "," <param> )*
+  <param>                       ::= <type> ID
+  <method-body>                 ::= <local-declaration>* <statement>*
+  <local-declaration>           ::= <type> ID ";"
+  <statement>                   ::= <assign-statement>
+                                  | <if-statement>
+                                  | <while-statement>
+                                  | <invoke-exp-statement>
+                                  | <return-statement>
+  <assign-statement>            ::= ID "=" <exp> ";"
+  <if-statement>                ::= "if" "(" <exp> ")" "{" <statement>* "}" ( "else" "{" <statement>* "}" )?
+  <while-statement>             ::= "while" "(" <exp> ")" "{" <statement>* "}"
+  <invoke-exp-statement>        ::= <invoke-exp> ";"
+  <return-statement>            ::= "return" <exp>? ";"
+  <exp>                         ::= <literal-exp>
+                                  | <unary-exp>
+                                  | <paren-exp>
+                                  | <binary-exp>
+                                  | <invoke-exp>
+                                  | <var-ref>
+  <literal-exp>                 ::= <boolean-literal> | INT
+  <boolean-literal>             ::= "true" | "false"
+  <unary-exp>                   ::= <unary-op> <exp>
+  <unary-op>                    ::= "+" | "-" | "!"
+  <binary-exp>                  ::= <exp> <binary-op> <exp>
+  <binary-op>                   ::= "+" | "-" | "*" | "/" | "%" | ">" | ">=" | "==" | "<" | "⇐" | "!=" | "&&" | "||"
+  <paren-exp>                   ::= "(" <exp> ")"
+  <invoke-exp>                  ::= ( ID "." )? ID "(" <args>? ")"
+  <args>                        ::= <exp> ( "," <exp> )*
+  <var-ref>                     ::= ID
+  
+  ID                              = ( ‘a’..’z’ | ‘A’..’Z’ | ‘_’ | ‘$’ ) ( ‘a’..’z’ | ‘A’..’Z’ | ‘_’ | ‘0’..’9’ | ‘$’ )*
+  INT                             = ‘0’ | (’1’..’9’) (’0’..’9’)*
+  
+Static Java as implemented in Eclipse JDT, ASM, and JVM Bytecode
+================================================================
+
+.. list-table::
+   :widths: 19 27 27 27
+   :header-rows: 1
+   
+   * - StaticJava
+     - Eclipse JDT (org.eclipse.jdt.core.dom.*)
+     - ASM (org.objectweb.asm.tree.*)
+     - JVM Bytecode
+   * - <program>
+     - CompilationUnit
+     - N/A
+     - N/A
+   * - <class-declaration>
+     - TypeDeclaration
+     - ClassNode
+     - N/A
+   * - <main-method-declaration>
+     - MethodDeclaration
+     - MethodNode
+     - N/A
+   * - <field-declaration>
+     - FieldDeclaration
+     - FieldNode
+     - N/A
+   * - <method-declaration>
+     - MethodDeclaration
+     - MethodNode
+     - N/A
+   * - <type>
+     - Type (PrimitiveType)
+     - N/A
+     - N/A
+   * - <return-type>
+     - PrimitiveType
+     - N/A
+     - N/A
+   * - <param>
+     - SingleVariableDeclaration
+     - N/A
+     - N/A
+   * - <method-body>
+     - Block
+     - N/A
+     - N/A
+   * - <local-declaration>
+     - VariableDeclarationStatement
+     - LocalVariableNode
+     - N/A
+   * - <assign-statement>
+     - ExpressionStatement (Assignment)
+     - VarInsnNode
+     - ISTORE, PUTSTATIC
+   * - <if-statement>
+     - IfStatement
+     - JumpInsnNode
+     - IF_xxx, GOTO
+   * - <while-statement>
+     - WhileStatement
+     - JumpInsnNode
+     - IF_xxx, GOTO
+   * - <invoke-exp-statement>
+     - ExpressionStatement (MethodInvocation)
+     - MethodInsnNode
+     - INVOKESTATIC
+   * - <return-statement>
+     - ReturnStatement
+     - InsnNode
+     - RETURN, IRETURN
+   * - <literal-exp>
+     - BooleanLiteral, NumberLiteral
+     - InsnNode
+     - ICONST_M1, ICONST_0, ICONST_1, ICONST_2, ICONST_3, ICONST_4, ICONST_5, BIPUSH, SIPUSH, LDC
+   * - <unary-exp>
+     - PrefixExpression
+     - IntInsnNode, JumpInsnNode
+     - INEG, IF_EQ
+   * - <binary-exp>
+     - InfixExpression
+     - InsnNode, JumpInsnNode
+     - IADD, ISUB, IMUL, IDIV, IREM, INEG, IF_xxx, GOTO
+   * - <paren-exp>
+     - ParenthesizedExpression
+     - N/A
+     - N/A
+   * - <invoke-exp>
+     - MethodInvocation
+     - MethodInsnNode
+     - INVOKESTATIC
+   * - <var-ref>
+     - SimpleName
+     - VarInsnNode, FieldInsnNode
+     - ILOAD, GETSTATIC
+
+----
+     
+Miscellaneous: POP, POP2, DUP, DUP_X1, DUP_X2, DUP2, DUP2_X1, DUP2_X2, SWAP
+   
+
+Project -- Extended Static Java Compiler (esjc)
+***********************************************
+
+Extended Static Java Compiler (esjc) is a compiler for a strict "static" subset
+of Java that extends the Static Java compiler by including, for example, heap
+objects/arrays.
+This project serves as an individual mini-project for students to demonstrate
+their understandings of the essential concepts in designing and implementing a
+translator.
+
+Features/Limitations of Extended Static Java
+============================================
+
+* Allows user-defined class and (one-dimensional) array types
+* No threads
+* Only static fields and methods for the main (public) class, and public
+  (non-static) fields for the rest.
+* Method return type can be the above type and void
+* No method overloading
+* Can call Java library static methods (e.g., Integer.parseInt())
+* Consists only one public class that has a Java main method, and non-public
+  classes
+* No increment and decrement expressions
+* No package declaration (i.e., the declared class lives in the default package)
+* All code must be in one file, etc.
+
+Concrete Syntax of Extended Static Java
+=======================================
+
+Note: non-terminals with ! are new or modified (wrt. StaticJava concrete syntax)
+
+::
+
+  <program ! >                  ::= <simple-class-declaration>* <class-declaration> <simple-class-declaration>*
+  <simple-class-declaration ! > ::= "class" ID "{" <public-field-declaration>* "}"
+  <public-field-declaration ! > ::= "public" <type> ID ";"
+  <class-declaration>           ::= "public" "class" ID "{" <main-method-declaration> <field-or-method-declaration>* "}"
+  <main-method-declaration>     ::= "public" "static" "void" "main" "(" "String" "[" "]" ID ")" "{" <method-body> "}"
+  <field-or-method-declaration> ::= <field-declaration> | <method-declaration>
+  <field-declaration>           ::= "static" <type> ID ";"
+  <method-declaration>          ::= "static" <return-type> ID "(" <params>? ")" "{" <method-body> "}"
+  <type ! >                     ::= ( <basic-type> | ID ) ( "[" "]" )?
+  <basic-type>                  ::= "boolean" | "int"
+  <return-type>                 ::= <type> | "void"
+  <params>                      ::= <param> ( "," <param> )*
+  <param>                       ::= <type> ID
+  <method-body>                 ::= <local-declaration>* <statement>*
+  <local-declaration>           ::= <type> ID ";"
+  <statement ! >                ::= <assign-statement>
+                                  | <if-statement>
+                                  | <while-statement>
+                                  | <invoke-exp-statement>
+                                  | <return-statement>
+                                  | <for-statement>
+                                  | <do-while-statement>
+                                  | <inc-dec-statement>
+  <assign-statement>            ::= <assign> ";"
+  <assign>                      ::= <lhs> "=" <exp>
+  <lhs ! >                      ::= ID | <exp> "." ID | <exp> "[" <exp> "]"
+  <if-statement>                ::= "if" "(" <exp> ")" "{" <statement>* "}" ( "else" "{" <statement>* "}" )?
+  <while-statement>             ::= "while" "(" <exp> ")" "{" <statement>* "}"
+  <invoke-exp-statement>        ::= <invoke-exp> ";"
+  <return-statement>            ::= "return" <exp>? ";"
+  <for-statement ! >            ::= "for" "(" <for-inits>? ";" <exp>? ";" <for-updates>? ")" "{" <statement>* "}"
+  <for-inits ! >                ::= <assign> ( "," <assign> )*
+  <for-updates ! >              ::= <inc-dec> ( "," <inc-dec> )*
+  <inc-dec ! >                  ::= <lhs> "++" | <lhs> "––"
+  <do-while-statement ! >       ::= "do" "{" <statement>* "}" "while" "(" <exp> ")" ";"
+  <inc-dec-statement ! >        ::= <inc-dec> ";"
+  <exp ! >                      ::= <literal-exp>
+                                  | <unary-exp>
+                                  | <binary-exp>
+                                  | <paren-exp>
+                                  | <invoke-exp>
+                                  | <var-ref>
+                                  | <new-exp>
+                                  | <array-access-exp>
+                                  | <field-access-exp>
+                                  | <cond-exp>
+  <literal-exp ! >              ::= <boolean-literal> | INT | "null"
+  <boolean-literal>             ::= "true" | "false"
+  <unary-exp>                   ::= <unary-op> <exp>
+  <unary-op>                    ::= "+" | "-" | "!" | "~"
+  <binary-exp>                  ::= <exp> <binary-op> <exp>
+  <binary-op>                   ::= "+" | "-" | "*" | "/" | "%" | ">" | ">=" | "==" | "<" | "<=" | "!=" | "&&" | "||" | "<<" | ">>" | ">>>"
+  <paren-exp>                   ::= "(" <exp> ")"
+  <invoke-exp>                  ::= ( ID "." )? ID "(" <args>? ")"
+  <args>                        ::= <exp> ( "," <exp> )*
+  <var-ref>                     ::= ID
+  <cond-exp>                    ::= <exp> "?" <exp> ":" <exp>
+  <new-exp>                     ::= "new" ID "(" ")"
+                                  | "new" ( <basic-type> | ID ) "[" <exp> "]"
+                                  | "new" ( <basic-type> | ID ) "[" "]" <array-init>
+  <array-init>                  ::= "{" <exp> ( "," <exp> )* "}"
+  <field-access-exp>            ::= <exp> "." ID
+  <array-access-exp>            ::= <exp> "[" <exp> "]"
+  
+  ID                              = ( ‘a’..’z’ | ‘A’..’Z’ | ‘_’ | ‘$’ ) ( ‘a’..’z’ | ‘A’..’Z’ | ‘_’ | ‘0’..’9’ | ‘$’ )*
+  INT                             = ‘0’ | (’1’..’9’) (’0’..’9’)*

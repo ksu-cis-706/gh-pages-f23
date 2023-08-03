@@ -1,0 +1,143 @@
+.. _schedule:
+
+Schedule
+########
+
+.. raw:: html
+
+   <h3>CIS 706/801: Translator Design I & II, Fall 2023</h3>
+
+----
+
+.. include:: def.rst
+
+* Canvas
+
+  * Lecture Slides
+  * Lecture Videos
+
+----
+
+.. list-table::
+   :widths: 10 25 30 15 20
+   :header-rows: 1
+   :align: left
+
+   * - Week. Lab: Date
+     - Lectures
+     - Reading
+     - Lab
+     - Remarks
+   * - 1. T: Aug 22
+     -
+       * Scanners
+       * Parsers
+     - * Dragon Ch. 1 - 2.3 & Ch. 3
+       * `IntelliJ <https://www.jetbrains.com/idea/documentation/>`__ documentations & tutorials
+       * `Git <http://git-scm.com>`__ documentations & tutorials
+       * `JUnit <https://junit.org/junit4>`__ documentation & tutorials
+     - Course Overview
+     - * Install |SireumIVE| (see :ref:`sireum`)
+       * Clone private repo https://github.com/ksu-cis-706/f23-706-<eid>
+       * Set up https://github.com/ksu-cis-706/f23-706-project as upstream (see :ref:`gitw` & `Working with Forks <https://help.github.com/articles/working-with-forks/>`__)
+   * - 2. T: Aug 29
+     - * Top-down Parsers
+       * ANTLR4
+     - * Dragon Ch. 2.4 - 2.9 & Ch. 4
+       * `ANTLR4 <http://antlr.org>`__ Book/Documentation
+     - Project M1: Scanner & Parser (due **Sep 11, 11:59pm, US Central**)
+     - * Demo: |SireumIVE| 
+       * Demo: ANTLR v4 plugin
+   * - 3. T: Sep 5
+     - * Abstract Syntax Tree
+       * Eclipse JDT
+     - * Dragon Ch. 4 & 5
+       * `Eclipse JDT Documentation <http://help.eclipse.org/>`__
+     - Exam 1: Scanners, Parsers & Top-Down Parsers
+     - 
+   * - 4. T: Sep 12
+     - * Symbol Table
+       * Type Checking
+       * Bottom-up Parsers
+     - * Dragon Ch. 2.7 & Ch. 6.1 - 6.5
+     - Project M2: Abstract Syntax Tree (due **Sep 25, 11:59, US Central**)
+
+       Exam 1 Discussion
+     - * Demo: JDT AstView Plugin
+   * - 5. T: Sep 19
+     - * Virtual Machine
+       * Code Generation: Eclipse JDT to Java bytecode using ASM
+     - * Dragon Ch. 6.6 - 6.9 & Ch. 8.1-8.6
+     - Exam 2: AST, Symbol Table, and Type Checking
+     - 
+   * - 6. T: Sep 26
+     - * Bytecode Optimization
+     - * Dragon Ch. 8.7
+       * `JVM Specification <http://java.sun.com/docs/books/jvms/>`__
+       * `ASM <https://asm.ow2.io/>`__ Documentation and API
+     - Project M3: Type Checking (due **Oct 9, 11:59pm, US Central**)
+
+       Exam 2 Discussion
+     - 
+   * - 7. T: Oct 3
+     -
+     -
+     - 801 Final Project (due **Dec 16, 11:59pm, US Central**)
+     - 
+   * - 8. T: Oct 10
+     - * Static Analysis -- Overview
+       * Static Analysis -- Control Flow Graph (CFG)
+       * Static Analysis -- Reaching Definition
+     - * Nielson-Nielson-Hankin Ch. 1
+       * Dragon Ch. 9
+     - Project M4: Bytecode Generation (due **Oct 23, 11:59pm, US Central**)
+     - * Demo: ASM Bytecode Viewer Plugin
+   * - 9. T: Oct 17
+     - * Static Analysis -- Classic Problems
+       * Static Analysis -- Monotone Dataflow Framework
+     - * Nielson-Nielson-Hankin Ch. 2
+       * Dragon Ch. 9
+     - Exam 3: Virtual Machine, Bytecode Generation, and Bytecode Optimization
+     - 
+   * - 10. T: Oct 24
+     -
+     -
+     - Project M5: Static Analysis (due **Nov 6, 11:59pm, US Central**)
+
+       Exam 3 Discussion
+     - 
+   * - 11. T: Oct 31
+     -
+     -
+     - Exam 4: Static Analysis -- CFG, Reaching Definition, Classic Problems, and Monotone Dataflow Framework
+     - 
+   * - 12. T: Nov 7
+     -
+     -
+     - Exam 4 Discussion
+     -
+   * - 13. *No Lab*
+     -
+     -
+     - 
+     -
+   * - A. **Thanksgiving Break**
+     -
+     -
+     -
+     - 
+   * - 14. T: Nov 28
+     -
+     -
+     - 706 Presentations
+     - 
+   * - 15. T: Dec 5
+     -
+     -
+     - 706/801 Presentations
+     -
+   * - 16. **F: Dec 16**
+     -
+     -
+     -
+     - * **801 Final Project Due**

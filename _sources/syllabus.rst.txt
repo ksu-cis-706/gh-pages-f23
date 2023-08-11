@@ -265,15 +265,6 @@ If you experience bias or discrimination, it can be reported here
 https://www.k-state.edu/report/discrimination/.
 
 
-Statement Regarding Wearing of Face Masks
-*****************************************
-
-Kansas State University strongly encourages, but does not require, that everyone wear masks
-while indoors on university property, including while attending in-person classes.
-For additional information and the latest on K-State's face covering policy, see
-https://www.k-state.edu/covid-19/guidance/health/face-covering.html.
-
-
 Statement Regarding Discrimination, Harassment, and Sexual Harassment
 *********************************************************************
 
@@ -301,6 +292,18 @@ OSL is a non-confidential resource. A comprehensive list of resources is availab
 If you have questions about non-confidential and confidential resources, please contact OIE at
 equity@ksu.edu or (785) 532-6220. 
 
+Statement Regarding Usages of Artificial Intelligence (AI) Resources
+**********************************************************
+You may use Artificial Intelligence (AI) tools to assist your learning in this course, 
+including idea generation and grammar assessments for written assignments.
+However, you are prohibited from using generative AI tools to completely produce,
+reproduce, and/or manufacture paper and/or other assignments without using any personal
+effort devoted to the learning process.
+If you choose to use AI appropriately, you are expected to provide a citation for it
+using the following format: “Title of AI Tool. Prompt or brief description of topic of
+search depending on tool. Date of creation.”
+Using an AI tool to generate assignment content without proper attribution would be a
+violation of the `K-State Honor Pledge <https://www.k-state.edu/honor/basics/pledge.html>`__.
 
 Other Administrative Issues
 ***************************

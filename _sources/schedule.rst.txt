@@ -82,7 +82,9 @@ Schedule
    * - 7. T: Oct 3
      -
      -
-     - 801 Final Project (due **Dec 16, 11:59pm, US Central**)
+     - 706 Presentation Topics
+       
+       801 Final Project (due **Dec 16, 11:59pm, US Central**)
      - 
    * - 8. T: Oct 10
      - * Static Analysis -- Overview
@@ -136,7 +138,7 @@ Schedule
      -
      - 706/801 Presentations
      -
-   * - 16. **F: Dec 16**
+   * - 16. **F: Dec 15**
      -
      -
      -

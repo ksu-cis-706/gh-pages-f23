@@ -42,40 +42,6 @@ Course Software Infrastructure
 It is required that you use |SireumIVE| which provides all the required tools
 for the course in a single bundle.
 
-To install from source:
-
-* **macOS/Linux**
-
-  .. code-block::
-
-     git clone https://github.com/sireum/kekinian
-     cd kekinian
-     git checkout <commit-or-tag>
-     git submodule update --init --recursive
-     bin/build.cmd setup
-
-* **Windows**
-
-  .. code-block::
-
-     git clone https://github.com/sireum/kekinian
-     cd kekinian
-     git checkout <commit-or-tag>
-     git submodule update --init --recursive
-     bin\build.cmd setup
-
-``<commit-or-tag>`` is ``8603817`` or ``4.20220822.8603817`` (or a later commit tip or tag).
-
-You can also download pre-built version of the above commit/tag at: https://github.com/sireum/kekinian/releases
-
-Before executing the macOS pre-built self-extracting file, you might need to "un-quarantine" the self-extracting executable:
-
-.. code-block::
-
-   xattr -rd com.apple.quarantine <PATH-TO>/sireum-dev-mac.sfx
-
-See more information at: https://github.com/sireum/kekinian/blob/master/readme.md
-
 .. _gitw:
 
 Git Workflow

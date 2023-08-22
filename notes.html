@@ -104,36 +104,8 @@ repository; thus, you need to have a <a class="reference external" href="https:/
 </section>
 <section id="course-software-infrastructure">
 <span id="sireum"></span><h2>Course Software Infrastructure<a class="headerlink" href="#course-software-infrastructure" title="Permalink to this heading">¶</a></h2>
-<p>It is required that you use <a class="reference external" href="https://github.com/sireum/kekinian">Sireum IVE</a> which provides all the required tools
+<p>It is required that you use <a class="reference external" href="https://sireum.org/getting-started/">Sireum IVE</a> which provides all the required tools
 for the course in a single bundle.</p>
-<p>To install from source:</p>
-<ul>
-<li><p><strong>macOS/Linux</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sireum</span><span class="o">/</span><span class="n">kekinian</span>
-<span class="n">cd</span> <span class="n">kekinian</span>
-<span class="n">git</span> <span class="n">checkout</span> <span class="o">&lt;</span><span class="n">commit</span><span class="o">-</span><span class="ow">or</span><span class="o">-</span><span class="n">tag</span><span class="o">&gt;</span>
-<span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span> <span class="o">--</span><span class="n">init</span> <span class="o">--</span><span class="n">recursive</span>
-<span class="nb">bin</span><span class="o">/</span><span class="n">build</span><span class="o">.</span><span class="n">cmd</span> <span class="n">setup</span>
-</pre></div>
-</div>
-</li>
-<li><p><strong>Windows</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sireum</span><span class="o">/</span><span class="n">kekinian</span>
-<span class="n">cd</span> <span class="n">kekinian</span>
-<span class="n">git</span> <span class="n">checkout</span> <span class="o">&lt;</span><span class="n">commit</span><span class="o">-</span><span class="ow">or</span><span class="o">-</span><span class="n">tag</span><span class="o">&gt;</span>
-<span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span> <span class="o">--</span><span class="n">init</span> <span class="o">--</span><span class="n">recursive</span>
-<span class="nb">bin</span>\<span class="n">build</span><span class="o">.</span><span class="n">cmd</span> <span class="n">setup</span>
-</pre></div>
-</div>
-</li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;commit-or-tag&gt;</span></code> is <code class="docutils literal notranslate"><span class="pre">8603817</span></code> or <code class="docutils literal notranslate"><span class="pre">4.20220822.8603817</span></code> (or a later commit tip or tag).</p>
-<p>You can also download pre-built version of the above commit/tag at: <a class="reference external" href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a></p>
-<p>Before executing the macOS pre-built self-extracting file, you might need to “un-quarantine” the self-extracting executable:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xattr</span> <span class="o">-</span><span class="n">rd</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">quarantine</span> <span class="o">&lt;</span><span class="n">PATH</span><span class="o">-</span><span class="n">TO</span><span class="o">&gt;/</span><span class="n">sireum</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">mac</span><span class="o">.</span><span class="n">sfx</span>
-</pre></div>
-</div>
-<p>See more information at: <a class="reference external" href="https://github.com/sireum/kekinian/blob/master/readme.md">https://github.com/sireum/kekinian/blob/master/readme.md</a></p>
 </section>
 <section id="git-workflow">
 <span id="gitw"></span><h2>Git Workflow<a class="headerlink" href="#git-workflow" title="Permalink to this heading">¶</a></h2>

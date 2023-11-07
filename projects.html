@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,9 +10,9 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=7b95706a" />
     <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css?v=90e37d00" />
     <link rel="stylesheet" type="text/css" href="_static/cis706.css?v=f84b051f" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/jquery-1.11.0.min.js"></script>
     <script src="_static/js/jquery-fix.js"></script>
     <script src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -83,16 +83,16 @@
     <div class="col-md-12 content">
       
   <section id="projects">
-<span id="id1"></span><h1>Projects<a class="headerlink" href="#projects" title="Permalink to this heading">¶</a></h1>
+<span id="id1"></span><h1>Projects<a class="headerlink" href="#projects" title="Link to this heading">¶</a></h1>
 <h3>CIS 706/801: Translator Design I & II, Fall 2023</h3><hr class="docutils" />
 <section id="example-project-static-java-compiler-sjc">
-<h2>Example Project – Static Java Compiler (sjc)<a class="headerlink" href="#example-project-static-java-compiler-sjc" title="Permalink to this heading">¶</a></h2>
+<h2>Example Project – Static Java Compiler (sjc)<a class="headerlink" href="#example-project-static-java-compiler-sjc" title="Link to this heading">¶</a></h2>
 <p>Static Java Compiler (sjc) is a compiler for a strict “static” (procedural)
 subset of Java (a compiler for structured programs in Java without objects).
 This project is used to illustrate various concepts in designing and
 implementing a translator.</p>
 <section id="features-limitations-of-static-java">
-<h3>Features/Limitations of Static Java<a class="headerlink" href="#features-limitations-of-static-java" title="Permalink to this heading">¶</a></h3>
+<h3>Features/Limitations of Static Java<a class="headerlink" href="#features-limitations-of-static-java" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Only two variable types: boolean and int</p></li>
 <li><p>No objects (thus, no exception handling), arrays, or threads</p></li>
@@ -108,7 +108,7 @@ here)</p></li>
 </ul>
 </section>
 <section id="concrete-syntax-of-static-java">
-<h3>Concrete Syntax of Static Java<a class="headerlink" href="#concrete-syntax-of-static-java" title="Permalink to this heading">¶</a></h3>
+<h3>Concrete Syntax of Static Java<a class="headerlink" href="#concrete-syntax-of-static-java" title="Link to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;program&gt;                     ::= &lt;class-declaration&gt;
 &lt;class-declaration&gt;           ::= &quot;public&quot; &quot;class&quot; ID &quot;{&quot; &lt;main-method-declaration&gt; &lt;field-or-method-declaration&gt;* &quot;}&quot;
 &lt;main-method-declaration&gt;     ::= &quot;public&quot; &quot;static&quot; &quot;void&quot; &quot;main&quot; &quot;(&quot; &quot;String&quot; &quot;[&quot; &quot;]&quot; ID &quot;)&quot; &quot;{&quot; &lt;method-body&gt; &quot;}&quot;
@@ -154,7 +154,7 @@ INT                             = ‘0’ | (’1’..’9’) (’0’..’9’
 </div>
 </section>
 <section id="static-java-as-implemented-in-eclipse-jdt-asm-and-jvm-bytecode">
-<h3>Static Java as implemented in Eclipse JDT, ASM, and JVM Bytecode<a class="headerlink" href="#static-java-as-implemented-in-eclipse-jdt-asm-and-jvm-bytecode" title="Permalink to this heading">¶</a></h3>
+<h3>Static Java as implemented in Eclipse JDT, ASM, and JVM Bytecode<a class="headerlink" href="#static-java-as-implemented-in-eclipse-jdt-asm-and-jvm-bytecode" title="Link to this heading">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 19.0%" />
@@ -282,7 +282,7 @@ INT                             = ‘0’ | (’1’..’9’) (’0’..’9’
 </section>
 </section>
 <section id="project-extended-static-java-compiler-esjc">
-<h2>Project – Extended Static Java Compiler (esjc)<a class="headerlink" href="#project-extended-static-java-compiler-esjc" title="Permalink to this heading">¶</a></h2>
+<h2>Project – Extended Static Java Compiler (esjc)<a class="headerlink" href="#project-extended-static-java-compiler-esjc" title="Link to this heading">¶</a></h2>
 <p>Extended Static Java Compiler (esjc) is a compiler for a strict “static” subset
 of Java that extends the Static Java compiler by including, for example, heap
 objects/arrays.
@@ -290,7 +290,7 @@ This project serves as an individual mini-project for students to demonstrate
 their understandings of the essential concepts in designing and implementing a
 translator.</p>
 <section id="features-limitations-of-extended-static-java">
-<h3>Features/Limitations of Extended Static Java<a class="headerlink" href="#features-limitations-of-extended-static-java" title="Permalink to this heading">¶</a></h3>
+<h3>Features/Limitations of Extended Static Java<a class="headerlink" href="#features-limitations-of-extended-static-java" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Allows user-defined class and (one-dimensional) array types</p></li>
 <li><p>No threads</p></li>
@@ -307,7 +307,7 @@ classes</p></li>
 </ul>
 </section>
 <section id="concrete-syntax-of-extended-static-java">
-<h3>Concrete Syntax of Extended Static Java<a class="headerlink" href="#concrete-syntax-of-extended-static-java" title="Permalink to this heading">¶</a></h3>
+<h3>Concrete Syntax of Extended Static Java<a class="headerlink" href="#concrete-syntax-of-extended-static-java" title="Link to this heading">¶</a></h3>
 <p>Note: non-terminals with ! are new or modified (wrt. StaticJava concrete syntax)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;program ! &gt;                  ::= &lt;simple-class-declaration&gt;* &lt;class-declaration&gt; &lt;simple-class-declaration&gt;*
 &lt;simple-class-declaration ! &gt; ::= &quot;class&quot; ID &quot;{&quot; &lt;public-field-declaration&gt;* &quot;}&quot;

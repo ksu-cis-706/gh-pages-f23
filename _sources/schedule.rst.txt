@@ -101,12 +101,10 @@ Schedule
        * Dragon Ch. 9
      - Exam 3: Virtual Machine, Bytecode Generation, and Bytecode Optimization
      - 
-   * - 10. T: Oct 24
+   * - 10. *No Lab*
      -
      -
      - Project M5: Static Analysis (due **Nov 6, 11:59pm, US Central**)
-
-       Exam 3 Discussion
      - 
    * - 11. T: Oct 31
      -
@@ -116,7 +114,7 @@ Schedule
    * - 12. T: Nov 7
      -
      -
-     - Exam 4 Discussion
+     - Exam 3 & 4 Discussion
      -
    * - 13. *No Lab*
      -
@@ -131,12 +129,14 @@ Schedule
    * - 14. T: Nov 28
      -
      -
-     - 706 Presentations
+     - 706 Presentations -- Xtext & textX
      - 
-   * - 15. T: Dec 5
+   * - 15. T U: Dec 5 & 7
      -
      -
-     - 706/801 Presentations
+     - T: 706 Presentation -- Langium
+
+       U: 801 Presentation -- ESJ-to-Rust Transpiler
      -
    * - 16. **F: Dec 15**
      -

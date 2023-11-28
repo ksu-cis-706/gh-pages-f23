@@ -131,12 +131,12 @@ Schedule
      -
      - 706 Presentations -- Xtext & textX
      - 
-   * - 15. T U: Dec 5 & 7
+   * - 15. T: Dec 5
      -
      -
-     - T: 706 Presentation -- Langium
+     - 706 Presentation -- Langium
 
-       U: 801 Presentation -- ESJ-to-Rust Transpiler
+       801 Presentation -- ESJ-to-Rust Transpiler
      -
    * - 16. **F: Dec 15**
      -
